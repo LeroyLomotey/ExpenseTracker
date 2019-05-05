@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpenseIncomeType"
+    android:background="@drawable/moneyfire2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        android:background="#FF33B5E5"
+        android:weightSum="6"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2.99"
+            android:background="#FF33B5E5"
+            android:fontFamily="@font/caviardreams"
+            android:gravity="bottom"
+            android:text="Income"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".02"
+
+            android:background="@android:drawable/dialog_holo_light_frame" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2.99"
+            android:background="#FF33B5E5"
+            android:fontFamily="@font/caviardreams"
+            android:gravity="bottom"
+            android:text="Expense"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+   <LinearLayout
+       android:id="@+id/expensePage"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:visibility="gone">
+
+       <LinearLayout
+           android:id="@+id/row1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:id="@+id/foodExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               android:background="">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/foodicon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="food"
+                   android:textColor="#616161"
+                   android:textSize="12sp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/clotingExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               android:background="">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/clothingicon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="clothing"
+                   android:textColor="#616161"
+                   android:textSize="12sp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/transportExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               >
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/transporticon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="transport"
+                   android:textSize="12sp"
+                   android:textColor="#616161"
+                   />
+           </LinearLayout>
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/row2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:id="@+id/billsExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               android:background="">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/billsicon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="bills"
+                   android:textColor="#616161"
+                   android:textSize="12sp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/entertainmentExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               android:background="">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/entertainmenticon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="entertain"
+                   android:textColor="#616161"
+                   android:textSize="12sp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/travelExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               >
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/travelicon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="travel"
+                   android:textSize="12sp"
+                   android:textColor="#616161"
+                   />
+           </LinearLayout>
+       </LinearLayout>
+
+
+
+       <LinearLayout
+           android:id="@+id/row3"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:id="@+id/groceryExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               android:background="">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/groceryicon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="groceries"
+                   android:textColor="#616161"
+                   android:textSize="12sp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/hobbyExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               android:background="">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/hobbyicon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="hobbies"
+                   android:textColor="#616161"
+                   android:textSize="12sp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/workExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               >
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/workicon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="work"
+                   android:textSize="12sp"
+                   android:textColor="#616161"
+                   />
+           </LinearLayout>
+       </LinearLayout>
+
+
+
+       <LinearLayout
+           android:id="@+id/row4"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:weightSum="3">
+
+           <LinearLayout
+               android:id="@+id/giftExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               android:background="">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/gifticon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="gift"
+                   android:textColor="#616161"
+                   android:textSize="12sp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/maintenanceExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               android:background="">
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/maintenanceicon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="maintenance"
+                   android:textColor="#616161"
+                   android:textSize="12sp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/otherExpense"
+               android:layout_width="0dp"
+               android:layout_height="60dp"
+               android:orientation="vertical"
+               android:weightSum="1"
+               android:clickable="true"
+               android:layout_margin="20dp"
+               android:layout_weight="1"
+               >
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_gravity="center"
+                   android:src="@drawable/othericon"
+                   android:background="@android:color/transparent"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:gravity="center"
+                   android:layout_weight="0.4"
+                   android:fontFamily="@font/caviardreams"
+                   android:text="other"
+                   android:textSize="12sp"
+                   android:textColor="#616161"
+                   />
+           </LinearLayout>
+       </LinearLayout>
+   </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/incomePage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/salaryIncome"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:clickable="true"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center"
+                    android:src="@drawable/salaryicon"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/caviardreams"
+                    android:text="salary"
+                    android:textColor="#616161"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/businessIncome"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:clickable="true"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center"
+                    android:src="@drawable/businessicon"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/caviardreams"
+                    android:text="business"
+                    android:textColor="#616161"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/giftIncome"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:clickable="true"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gifticon"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/caviardreams"
+                    android:text="gift"
+                    android:textSize="12sp"
+                    android:textColor="#616161"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/loanIncome"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:clickable="true"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center"
+                    android:src="@drawable/loanicon"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/caviardreams"
+                    android:text="loan"
+                    android:textColor="#616161"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/taxIncome"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:clickable="true"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center"
+                    android:src="@drawable/taxreturnicon"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/caviardreams"
+                    android:text="tax returns"
+                    android:textColor="#616161"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/otherIncome"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:clickable="true"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_gravity="center"
+                    android:src="@drawable/othericon"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/caviardreams"
+                    android:text="other"
+                    android:textSize="12sp"
+                    android:textColor="#616161"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
