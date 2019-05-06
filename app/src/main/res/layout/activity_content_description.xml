@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    android:background="@android:color/background_light"
+    android:background="@android:color/white"
     tools:context=".ContentDescription">
 
 
@@ -13,19 +13,20 @@
         android:id="@+id/descIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:background="@android:color/holo_blue_dark"
+        android:contentDescription="@string/food"
         android:padding="10dp"
-        android:src="@drawable/businessicon"
-        android:background="@android:color/holo_blue_dark"/>
+        android:src="@drawable/businessicon" />
 
     <TextView
         android:id="@+id/descItem"
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_toRightOf="@id/descIcon"
+        android:layout_toEndOf="@id/descIcon"
         android:background="@android:color/holo_blue_dark"
         android:fontFamily="@font/caviardreams_bold"
         android:gravity="center"
-        android:text="Food"
+        android:text="@string/Food"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
 
@@ -33,26 +34,50 @@
         android:id="@+id/descCurrency"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@id/totalExpenses"
         android:fontFamily="@font/caviardreams_bold"
         android:gravity="center"
-        android:text="USD"
+        android:text="@string/usd"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/expenses"
+        android:id="@+id/expensesContent"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_toLeftOf="@id/descCurrency"
+        android:padding="10dp"
+        android:layout_toStartOf="@id/descCurrency"
         android:background="@android:color/darker_gray"
-        android:gravity="center"
         android:inputType="number"
-        android:paddingRight="10dp"
-        android:text="100"
+        android:fontFamily=""
+        android:text="@string/_100"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/contentDesc"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/descIcon"
+        android:layout_marginTop="50dp"
+        android:background="@android:drawable/picture_frame"
+        android:gravity="start"
+        android:inputType="text"
+        android:padding="10dp"
+        android:text="Enter Description here"
+        android:fontFamily="@font/caviardreams_bold"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/contentDesc"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="save"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"/>
 </RelativeLayout>

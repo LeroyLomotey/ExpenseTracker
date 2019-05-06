@@ -23,4 +23,7 @@
     <string name="business">business</string>
     <string name="hobbies">hobbies</string>
     <string name="salary">salary</string>
+    <string name="Food">Food</string>
+    <string name="usd">USD</string>
+    <string name="_100">100</string>
 </resources>
