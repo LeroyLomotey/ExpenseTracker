@@ -171,11 +171,22 @@
                 android:textColor="@android:color/black"
                 android:textSize="25sp" />
 
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- A RecyclerView with some commonly used attributes -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/transactionTitle"/>
+
+
             <LinearLayout
                 android:id="@+id/transactionLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/transactionTitle"
+                android:visibility="gone"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -183,16 +194,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:background="@android:color/white"
-                    android:backgroundTint="@android:color/background_light"
+                    android:background="@android:color/holo_blue_dark"
                     android:orientation="vertical"
                     android:padding="10px">
 
                     <ImageButton
                         android:id="@+id/transactionIcon1"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@android:color/transparent"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/white"
                         android:scaleType="fitCenter"
                         android:src="@drawable/groceryicon" />
 
@@ -201,9 +211,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@id/transactionIcon1"
+                        android:padding="5dp"
                         android:fontFamily="@font/caviardream"
                         android:text="Groceries"
-                        android:textColor="@android:color/black"
+                        android:textColor="@android:color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -214,16 +225,18 @@
                         android:layout_alignParentRight="true"
                         android:fontFamily="@font/caviardreams"
                         android:text="-100 USD"
-                        android:textColor="#ff4444"
+                        android:textColor="@color/colorAccent"
                         android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/description1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="5dp"
                         android:layout_below="@+id/transactionType1"
                         android:layout_toRightOf="@id/transactionIcon1"
                         android:fontFamily="sans-serif"
+                        android:textColor="@android:color/white"
                         android:text="Target groceries. Milk, Eggs, Bacon, item, item, item, item, item, item , item." />
                 </RelativeLayout>
 
